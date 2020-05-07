@@ -1,0 +1,139 @@
+﻿<Window x:Class="ProyectoFinal_LGE.View.VentanasAddEdit.AddEditUsuario"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal_LGE.View.VentanasAddEdit" ResizeMode="NoResize"
+        mc:Ignorable="d" Height="395" Width="545" AllowsTransparency="True"
+        FocusManager.FocusedElement="{Binding ElementName=user}"
+        WindowStyle="None"  WindowStartupLocation="CenterScreen">
+
+    <Grid Height="395" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="60*" />
+            <RowDefinition Height="60*" />
+            <RowDefinition Height="60*" />
+            <RowDefinition Height="140*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--Parte superior de la ventana-->
+        <Border Grid.Row="0" Grid.ColumnSpan="3" Background="Transparent" 
+                MouseLeftButtonDown="Border_MouseLeftButtonDown">
+            <Grid>
+                <materialDesign:ColorZone Mode="Dark" VerticalAlignment="Stretch">
+                    <StackPanel HorizontalAlignment="Right">
+                        <Button  materialDesign:ShadowAssist.ShadowDepth="Depth3" 
+                                 Style="{DynamicResource BotonVentana}" Click="CancelarClick">
+                            <materialDesign:PackIcon Kind="WindowClose" Foreground="White"/>
+                        </Button>
+                    </StackPanel>
+                </materialDesign:ColorZone>
+            </Grid>
+        </Border>
+        <!--Nombre usuario-->
+        <TextBox Name="user" Grid.Row="1" Grid.ColumnSpan="2"  VerticalContentAlignment="Center" VerticalAlignment="Center"
+                 Text="{Binding User}"
+                 materialDesign:HintAssist.Hint="{DynamicResource User}" 
+                 materialDesign:HintAssist.Foreground="#4f85fa"
+                 materialDesign:TextFieldAssist.UnderlineBrush="#4f85fa"
+                 BorderBrush="#4f85fa" BorderThickness="0 0 0 1"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}" 
+                 FontFamily="Champagne &amp; Limousines" FontSize="15"
+                 Margin="43,0" >
+        </TextBox>
+        <!--Contraseña-->
+        <PasswordBox Grid.Row="2" Grid.Column="0" VerticalContentAlignment="Center" VerticalAlignment="Center"
+                 Name="pwd" 
+                 materialDesign:HintAssist.Hint="{DynamicResource Pwd}" 
+                 materialDesign:HintAssist.Foreground="#4f85fa"
+                 materialDesign:TextFieldAssist.UnderlineBrush="#4f85fa"
+                 BorderBrush="#4f85fa" BorderThickness="0 0 0 1"
+                 Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}"
+                 FontFamily="Champagne &amp; Limousines" FontSize="15" Grid.ColumnSpan="2"
+                 Margin="43,0">
+        </PasswordBox>
+        <!--Borrar imagen-->
+        <Button Grid.Row="3" Grid.Column="1" Click="EliminarImagen" ToolTip="{DynamicResource EliminarImagen}"
+                Height="28" Grid.ColumnSpan="2"  Margin="140,12,170,13" HorizontalContentAlignment="Center" >
+            <materialDesign:PackIcon Kind="Trash" Margin="0" />
+        </Button>
+        <!--Imagen perfil-->
+        <Image Grid.Column="2" Grid.RowSpan="2" Grid.Row="1" Margin="30 30 30 10" Name="usuarioImagen"
+               Source="{Binding Imagen}"/>
+        <!--Subir imagen-->
+        <Button Grid.Row="3" Grid.Column="2" Click="SubirImagen" 
+                Height="28" FontSize="14" ToolTip="{DynamicResource SubirImagen}"
+                Content="{DynamicResource SubirImagen}"  Margin="30,0"  />
+
+        <!--PERMISOS-->
+        <TextBlock Grid.Row="3" VerticalAlignment="Center"
+                 Name="Categoria"  Text="{DynamicResource Permisos}" FontWeight="Bold"
+                 FontFamily="Champagne &amp; Limousines" FontSize="12"
+                 Margin="43,0"/>
+        <Grid Grid.Row="4" Grid.ColumnSpan="3" Grid.RowSpan="3" Name="gridPermisos" IsEnabled="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!--Importar-->
+            <CheckBox Grid.Row="0" Height="25"  Content="{DynamicResource Import}" IsChecked="{Binding Importar}"
+                  FlowDirection="LeftToRight" Margin="43,0"                   
+                  FontFamily="Champagne &amp; Limousines" FontSize="15"/>
+            <!--Exportar-->
+            <CheckBox Grid.Row="0" Grid.Column="1" Content="{DynamicResource Export}" IsChecked="{Binding Exportar}"
+                  FlowDirection="LeftToRight" Margin="30,0"                   
+                  FontFamily="Champagne &amp; Limousines" FontSize="15"/>
+            <!--Productos-->
+            <CheckBox Grid.Row="0" Grid.Column="2"  Content="{DynamicResource Productos}" IsChecked="{Binding Productos}"
+                  FlowDirection="LeftToRight" Margin="30,0"                   
+                  FontFamily="Champagne &amp; Limousines" FontSize="15"/>
+            <!--Caregorias-->
+            <CheckBox Grid.Row="1" Grid.Column="0"   Content="{DynamicResource Categorias}" IsChecked="{Binding Categorias}"
+                  FlowDirection="LeftToRight" Margin="43,0"                   
+                  FontFamily="Champagne &amp; Limousines" FontSize="15"/>
+            <!--Proveedores-->
+            <CheckBox Grid.Row="1" Grid.Column="1"  Content="{DynamicResource Proveedores}" IsChecked="{Binding Proveedores}" 
+                  FlowDirection="LeftToRight" Margin="30,0"                   
+                  FontFamily="Champagne &amp; Limousines" FontSize="15"/>
+            <!--Almacenes-->
+            <CheckBox Grid.Row="1" Grid.Column="2"  Content="{DynamicResource Almacenes}" IsChecked="{Binding Almacenes}"
+                  FlowDirection="LeftToRight" Margin="30,0"                   
+                  FontFamily="Champagne &amp; Limousines" FontSize="15"/>
+            <!--Usuarios-->
+            <CheckBox Grid.Row="2" Grid.Column="0"   Content="{DynamicResource Usuarios}" IsChecked="{Binding Usuarios}"
+                  FlowDirection="LeftToRight" Margin="43,0"                  
+                  FontFamily="Champagne &amp; Limousines" FontSize="15"/>
+            <!--Transacciones-->
+            <CheckBox Grid.Row="2" Grid.Column="1"  Content="{DynamicResource Transacciones}" IsChecked="{Binding Transacciones}"
+                  FlowDirection="LeftToRight" Margin="30,0"                   
+                  FontFamily="Champagne &amp; Limousines" FontSize="15"/>
+
+        </Grid>
+
+        <!--Aceptar-->
+        <Button Grid.Row="8" Grid.Column="1" 
+                Click="AceptarClick"
+                Height="28" FontSize="14"
+                Content="{DynamicResource Aceptar}"  Margin="30,0"/>
+        <!--Cancelar-->
+        <Button Grid.Row="8" Grid.Column="2" 
+                Click="CancelarClick"
+                Height="28" FontSize="14"
+                Content="{DynamicResource Cancelar}" Margin="30,0"  />
+    </Grid>
+</Window>

@@ -1,0 +1,70 @@
+﻿<Page x:Class="ProyectoFinal_LGE.View.PageMovimientos"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProyectoFinal_LGE.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" ShowsNavigationUI="False"
+      Title="PageCategories">
+
+    <DockPanel Background="#fafafa">
+        <!-- Botones Parte Superior-->
+        <StackPanel Name="stack" DockPanel.Dock="Top" Orientation="Horizontal" Height="55" 
+                    Background="Transparent"
+                    HorizontalAlignment="Right">
+            <!-- Exportar Transacciones-->
+            <Button Name="exportarTransaccion" IsEnabled="False"
+                    Command="{Binding ExportTransaccion}" 
+                    CommandParameter="{Binding ElementName=datagridT}"
+                    Padding="0" Width="30" Height="30" Margin="0 0 20 0"
+                    ToolTip="{DynamicResource Exportar}">
+                <materialDesign:PackIcon Kind="Export"/>
+            </Button>
+        </StackPanel>
+        
+        <!-- Tabla-->
+        <DataGrid ItemsSource="{Binding ListaTransacciones}" FontSize="12" Visibility="Visible"
+                  Name="datagridT" AutoGenerateColumns="False" IsReadOnly="True" >
+            <DataGrid.Columns>
+                <DataGridTextColumn  Binding="{Binding Fecha}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Fecha}" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Producto}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Producto}" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn  Binding="{Binding AlmacenV}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource AlmacenV}" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding AlmacenN}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource AlmacenN}" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Unidades}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Unidades}" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTemplateColumn Header="" x:Name="eliminarTransaccion" Visibility="Hidden" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding DataContext.BtnBorrarT, ElementName=datagridT}"
+                                    CommandParameter="{Binding ElementName=datagridT, Path=SelectedItem}"
+                                    Width="22" Height="22" Padding="0" ToolTip="{DynamicResource eliminarTransaccion}">
+                                <materialDesign:PackIcon Kind="Delete"/>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Page>

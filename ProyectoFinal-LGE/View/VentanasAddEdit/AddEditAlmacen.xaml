@@ -1,0 +1,76 @@
+﻿<Window x:Class="ProyectoFinal_LGE.View.VentanasAddEdit.AddEditAlmacen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal_LGE.View.VentanasAddEdit"
+        mc:Ignorable="d" Height="292.142" Width="460" AllowsTransparency="True" 
+        FocusManager.FocusedElement="{Binding ElementName=id}"
+        WindowStyle="None"  WindowStartupLocation="CenterScreen">
+
+    <Grid Height="292" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="81*" />
+            <RowDefinition Height="81*" />
+            <RowDefinition Height="140*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--Parte superior de la ventana-->
+        <Border Grid.Row="0" Grid.ColumnSpan="2" Background="Transparent" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+            <Grid>
+                <materialDesign:ColorZone Mode="Dark" VerticalAlignment="Stretch">
+                    <StackPanel HorizontalAlignment="Right">
+                        <Button  materialDesign:ShadowAssist.ShadowDepth="Depth3" 
+                                 Style="{DynamicResource BotonVentana}" Click="CancelarClick">
+                            <materialDesign:PackIcon Kind="WindowClose" Foreground="White"/>
+                        </Button>
+                    </StackPanel>
+                </materialDesign:ColorZone>
+            </Grid>
+        </Border>
+        <!--Codigo-->
+        <TextBox Name="id" Grid.Row="1" VerticalContentAlignment="Center" VerticalAlignment="Center"
+                 Text="{Binding Id}"
+                 materialDesign:HintAssist.Hint="{DynamicResource Id}" 
+                 materialDesign:HintAssist.Foreground="#4f85fa"
+                 materialDesign:TextFieldAssist.UnderlineBrush="#4f85fa"
+                 BorderBrush="#4f85fa" BorderThickness="0 0 0 1"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}" 
+                 FontFamily="Champagne &amp; Limousines" FontSize="15" Margin="43,24,172,4" Grid.ColumnSpan="2" >
+        </TextBox>
+        <!--Nombre-->
+        <TextBox Grid.Row="2" VerticalContentAlignment="Center" VerticalAlignment="Center"
+                 Text="{Binding Nombre}" Name="nombre"
+                 materialDesign:HintAssist.Hint="{DynamicResource Nombre}" 
+                 materialDesign:HintAssist.Foreground="#4f85fa"
+                 materialDesign:TextFieldAssist.UnderlineBrush="#4f85fa"
+                 BorderBrush="#4f85fa" BorderThickness="0 0 0 1"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}" 
+                 FontFamily="Champagne &amp; Limousines" FontSize="15" Margin="43,8,172,8" Grid.ColumnSpan="2"  >
+        </TextBox>
+        <!--Direccion-->
+        <TextBox Grid.Row="3" Grid.ColumnSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Center"
+                 Text="{Binding Direccion}" Name="dir"
+                 materialDesign:HintAssist.Hint="{DynamicResource Direccion}" 
+                 materialDesign:HintAssist.Foreground="#4f85fa"
+                 materialDesign:TextFieldAssist.UnderlineBrush="#4f85fa"
+                 BorderBrush="#4f85fa" BorderThickness="0 0 0 1"
+                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}" 
+                 FontFamily="Champagne &amp; Limousines" FontSize="15" Margin="43,8" >
+        </TextBox>
+        <!--Aceptar-->
+        <Button Grid.Row="4" Click="AceptarClick"
+                Content="{DynamicResource Aceptar}"  Grid.ColumnSpan="2" Margin="201,22,172,22"/>
+        <!--Cancelar-->
+        <Button Grid.Row="4" Grid.Column="1" 
+                Click="CancelarClick"
+                Height="28" FontSize="14"
+                Content="{DynamicResource Cancelar}" Margin="89,22,43,22"/>
+    </Grid>
+</Window>
