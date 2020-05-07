@@ -1,0 +1,222 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <!--Main Window-->
+    <system:String x:Key="Bienvenido">WELCOME!</system:String>
+    <system:String x:Key="PageInicio">START BY SIGNING-IN WITH YOUR CREDENTIALS</system:String>
+    <system:String x:Key="Karma">Karma | Inventory Management</system:String>
+    <system:String x:Key="Inicio">_Home</system:String>
+    <system:String x:Key="Info">Infor_mation</system:String>
+    <system:String x:Key="Salir">_Exit</system:String>
+    <system:String x:Key="Login">_Log In</system:String>
+    <system:String x:Key="Productos">Products</system:String>
+    <system:String x:Key="Categorias">Categories</system:String>
+    <system:String x:Key="Almacenes">Warehouses</system:String>
+    <system:String x:Key="Proveedores">Suppliers</system:String>
+    <system:String x:Key="MStock">Stock Movements</system:String>
+    <system:String x:Key="Informes">Reports</system:String>
+    <system:String x:Key="Ajustes">Settings</system:String>
+    <system:String x:Key="CerrarSesion">Log Out</system:String>
+    <system:String x:Key="GestionUsuarios">Manage Users</system:String>
+    <system:String x:Key="Ingles">English</system:String>
+    <system:String x:Key="Español">Spanish</system:String>
+
+    <!--Login-->
+    <system:String x:Key="LOGIN">LOG IN</system:String>
+    <system:String x:Key="Acceder">Access</system:String>
+    <system:String x:Key="User">Username</system:String>
+    <system:String x:Key="Pwd">Password</system:String>
+
+    <!--PageAlmacen-->
+    <system:String x:Key="Id">ID</system:String>
+    <system:String x:Key="Nombre">Name</system:String>
+    <system:String x:Key="Direccion">Address</system:String>
+    <system:String x:Key="AAlmacen">Add warehouse</system:String>
+    <system:String x:Key="MAlmacen">Edit warehouse</system:String>
+    <system:String x:Key="EAlmacen">Delete warehouse</system:String>
+    <system:String x:Key="Reporte">Report of the transactions of a warehouse</system:String>
+
+    <!--Page Categoria-->
+    <system:String x:Key="Descripcion">Description</system:String>
+    <system:String x:Key="ACategoria">Add category</system:String>
+    <system:String x:Key="MCategoria">Edit category</system:String>
+    <system:String x:Key="ECategoria">Delete category</system:String>
+
+    <!--Page Producto-->
+    <system:String x:Key="AProducto">Add product</system:String>
+    <system:String x:Key="MProducto">Edit product</system:String>
+    <system:String x:Key="EProducto">Delete product</system:String>
+    <system:String x:Key="Codigo">ID</system:String>
+    <system:String x:Key="Imagen">Image</system:String>
+    <system:String x:Key="Categoria">Category</system:String>
+    <system:String x:Key="Almacen">Warehouse</system:String>
+    <system:String x:Key="Unidades">Units</system:String>
+    <system:String x:Key="Ancho">Width(mm)</system:String>
+    <system:String x:Key="Largo">Length(mm)</system:String>
+    <system:String x:Key="Altura">Height(mm)</system:String>
+    <system:String x:Key="Proveedor">Supplier</system:String>
+    <system:String x:Key="PCompra">PricePurchase(€)</system:String>
+    <system:String x:Key="PVenta">PriceSale(€)</system:String>
+    <system:String x:Key="Disponible">Available</system:String>
+    <system:String x:Key="SubirImagen">Upload image</system:String>
+    <system:String x:Key="EliminarImagen">Delete image</system:String>
+    <system:String x:Key="SeleccionarImagen">Select an image</system:String>
+    <system:String x:Key="TieneImagen">The product already has an image. Change it</system:String>
+    <system:String x:Key="NoTieneImagen">There is no image. Upload it</system:String>
+
+    <!--Page Proveedor-->
+    <system:String x:Key="AProveedor">Add supplier</system:String>
+    <system:String x:Key="MProveedor">Edit supplier</system:String>
+    <system:String x:Key="EProveedor">Delete supplier</system:String>
+    <system:String x:Key="Empresa">Company</system:String>
+    <system:String x:Key="Contacto1">ContactName</system:String>
+    <system:String x:Key="Contacto2">ContactLastName</system:String>
+    <system:String x:Key="Direccion2">Address2</system:String>
+    <system:String x:Key="Ciudad">City</system:String>
+    <system:String x:Key="Pais">Country</system:String>
+    <system:String x:Key="Tlfno">Phone</system:String>
+    <system:String x:Key="Email">Email</system:String>
+
+    <!--Usuarios-->
+    <system:String x:Key="AUsuario">Add user</system:String>
+    <system:String x:Key="MUsuario">Edit user</system:String>
+    <system:String x:Key="EUsuario">Delete user</system:String>
+    <system:String x:Key="Usuarios">Users</system:String>
+    <system:String x:Key="Import">Import</system:String>
+    <system:String x:Key="Export">Export</system:String>
+    <system:String x:Key="Permisos">PERMISSIONS:</system:String>
+    <system:String x:Key="cambiarContraseña">Change Password</system:String>
+    <system:String x:Key="viejaContraseña">Password</system:String>
+    <system:String x:Key="nuevaContraseña">New password</system:String>
+
+
+    <!--General-->
+    <system:String x:Key="Cancelar">Cancel</system:String>
+    <system:String x:Key="Aceptar">Ok</system:String>
+    <system:String x:Key="Importar">Import CSV</system:String>
+    <system:String x:Key="Exportar">Export to CSV</system:String>
+
+
+    <!--MessageBox-->
+    <system:String x:Key="deseaSalir">Are you sure you want to go out?</system:String>
+    <system:String x:Key="error">Error</system:String>
+    <system:String x:Key="informacion">Information</system:String>
+    <system:String x:Key="guardarFichero">Save File</system:String>
+    <system:String x:Key="abrirFicheroCSV">Open CSV file</system:String>
+    <system:String x:Key="exportarExcel">The CSV has been successfully exported. Do you want to open it in Microsoft Excel?</system:String>
+    <system:String x:Key="microsoftExcel">You need to have installed Microsoft Excel</system:String>
+    <system:String x:Key="importarCSVIncorrecto">The CSV does not correspond to this entity, the file must start with</system:String>
+    <system:String x:Key="importarCSVCorrecto">The CSV has been successfully imported</system:String>
+    <system:String x:Key="errorImportar">The CSV couldn't be imported. You have an error in the LINE</system:String>
+    <system:String x:Key="errorImportar2">Remember, there can be no repeated entities, no wrong fields and the format must be as follows:</system:String>
+    <system:String x:Key="noInfoCSV">No information to export</system:String>
+
+    <!--AlmacenesVM-->
+    <system:String x:Key="almacenActualizado">Warehouse updated</system:String>
+    <system:String x:Key="eliminarAlmacen">You must first empty a warehouse before you can delete it</system:String>
+    <system:String x:Key="seleccionarAlmacen">Select a warehouse</system:String>
+    <system:String x:Key="almacenAñadido">Warehouse added</system:String>
+    <system:String x:Key="almacenEliminado">Warehouse deleted</system:String>
+    <system:String x:Key="deseaEliminarAlmacen">Do you want to delete the next warehouse?</system:String>
+    <system:String x:Key="almacenIdNoVacio">The warehouse ID cannot be left empty and must have a maximum of 5 characters</system:String>
+    <system:String x:Key="almacenNombreNoVacio">The name of the warehouse cannot be left empty and must have a maximum of 20 characters</system:String>
+    <system:String x:Key="almacenDirNoVacio">The warehouse address cannot be left empty and must have a maximum of 40 characters</system:String>
+    <system:String x:Key="seleccionarAlmacenReporte">Select the warehouse from which you want to make the report</system:String>
+    <system:String x:Key="almacenNoReporte">The selected warehouse has no recorded transactions</system:String>
+    <system:String x:Key="reporteAlmacen">The report has been generated correctly</system:String>
+    <system:String x:Key="reporteAbierto">Cannot generate the report, check that the file is not open</system:String>
+    <system:String x:Key="almacenCSV">id;name;address</system:String>
+    <system:String x:Key="almacenIdRepetido">The warehouse already exists, you cannot repeat the ID</system:String>
+
+    <!--CategoriaVM-->
+    <system:String x:Key="seleccionarCategoria">Select a category</system:String>
+    <system:String x:Key="categoriaActualizada">Category updated</system:String>
+    <system:String x:Key="categoriaAñadida">Category added</system:String>
+    <system:String x:Key="categoriaEliminada">Category deleted</system:String>
+    <system:String x:Key="deseaEliminarCategoria">Do you want to delete the next category?</system:String>
+    <system:String x:Key="categoriaIdNoVacio">The category ID cannot be left empty and must have a maximum of 3 characters</system:String>
+    <system:String x:Key="categoriaNombreNoVacio">The name of the category cannot be left empty and must have a maximum of 20 characters</system:String>
+    <system:String x:Key="categoriaDescMax">The description of the category cannot be left empty and must have a maximum of 90 characters</system:String>
+    <system:String x:Key="categoriaCSV">id;name;description</system:String>
+    <system:String x:Key="categoriaIdRepetido">The category already exists, you cannot repeat the ID</system:String>
+
+    <!--ProveedorVM-->
+    <system:String x:Key="seleccionarProveedor">Select a supplier</system:String>
+    <system:String x:Key="proveedorActualizado">Supplier updated</system:String>
+    <system:String x:Key="proveedorAñadido">Supplier added</system:String>
+    <system:String x:Key="proveedorEliminado">Supplier deleted</system:String>
+    <system:String x:Key="deseaEliminarProveedor">Do you want to delete the next supplier?</system:String>
+    <system:String x:Key="proveedorIdNoVacio">The supplier ID cannot be left empty and must have a maximum of 10 characters</system:String>
+    <system:String x:Key="proveedorNombreNoVacio">The name of the supplier cannot be left empty and must have a maximum of 20 characters</system:String>
+    <system:String x:Key="proveedorContactoNoVacio">The contact of the supplier cannot be left empty and must have a maximum of 20 characters</system:String>
+    <system:String x:Key="proveedorDirNoVacio">The address of the supplier cannot be left empty and must have a maximum of 40 characters</system:String>
+    <system:String x:Key="proveedorCiudadNoVacio">The city of the supplier cannot be left empty and must have a maximum of 20 characters</system:String>
+    <system:String x:Key="proveedorPaisNoVacio">The country of the supplier cannot be left empty and must have a maximum of 20 characters</system:String>
+    <system:String x:Key="proveedorTlnoNoVacio">The phone number of the supplier cannot be left empty and must have a maximum of 15 characters</system:String>
+    <system:String x:Key="proveedorEmailNoVacio">The email of the supplier cannot be left empty and must have a maximum of 40 characters</system:String>
+    <system:String x:Key="proveedorCSV">id;nameCompany;contact1;contact2;address2;city;country;phone;email</system:String>
+
+
+    <!--ProductoVM-->
+    <system:String x:Key="imagenMax">Image size cannot exceed 1 MB</system:String>
+    <system:String x:Key="seleccionarProducto">Select a product</system:String>
+    <system:String x:Key="productoActualizado">Product updated</system:String>
+    <system:String x:Key="productoAñadido">Product added</system:String>
+    <system:String x:Key="productoEliminado">Product deleted</system:String>
+    <system:String x:Key="deseaEliminarProducto">Do you want to delete the next product?</system:String>
+    <system:String x:Key="verImagenProducto">The selected product has no image associated with it</system:String>
+    <system:String x:Key="productoIdNoVacio">The product ID cannot be left empty and must have a maximum of 10 characters</system:String>
+    <system:String x:Key="productoAlmacenNoVacio">The warehouse of the product cannot be left empty</system:String>
+    <system:String x:Key="productoCatNoVacio">The category of the product cannot be left empty</system:String>
+    <system:String x:Key="productoProvNoVacio">The supplier of the product cannot be left empty</system:String>
+    <system:String x:Key="productoImagen">The image format is wrong. Do you want to save the product without an image?</system:String>
+    <system:String x:Key="productoNombreNoVacio">The name of the product cannot be left empty and must have a maximum of 90 characters</system:String>
+    <system:String x:Key="productoDescNoVacio">The description of the product cannot be left empty and must have a maximum of 90 characters</system:String>
+    <system:String x:Key="productoCSV">id;name;image;description;category;warehouse;units;width;length;height;supplier;pricePurchase;priceSale;available</system:String>
+    <system:String x:Key="productoCSVCorrecto">. Some images may not have been able to be imported</system:String>
+
+    <!--UsuarioVM-->
+    <system:String x:Key="exitoCambiarPwd">The password has been changed</system:String>
+    <system:String x:Key="errorCambiarPwd">Wrong password</system:String>
+    <system:String x:Key="pwdNoVacia">The new password cannot be empty</system:String>
+    <system:String x:Key="pwdMax">The password must be between 5 and 15 characters</system:String>
+    <system:String x:Key="igualPwd">The new password cannot be the current one</system:String>
+    <system:String x:Key="seleccionarUsuario">Select a user</system:String>
+    <system:String x:Key="usuarioActualizado">User updated</system:String>
+    <system:String x:Key="usuarioAñadido">User added</system:String>
+    <system:String x:Key="usuarioEliminado">User deleted</system:String>
+    <system:String x:Key="usuarioAdmin">The admin user cannot be deleted</system:String>
+    <system:String x:Key="usuarioLogeado">You are logged in with that user, you cannot delete it</system:String>
+    <system:String x:Key="deseaEliminarUsuario">Do you want to delete the next user?</system:String>
+    <system:String x:Key="noExisteUsuario">The user does not exist</system:String>
+    <system:String x:Key="usuarioNombreNoVacio">The user name cannot be left empty and must have a maximum of 40 characters</system:String>
+    <system:String x:Key="usuarioPwdNoVacio">The user password cannot be left empty</system:String>
+    <system:String x:Key="usuarioYaExiste">The user already exists</system:String>
+    <system:String x:Key="usuarioPwdIgual">The password hasn't changed. Do you want to save the changes?</system:String>
+
+    <!--MovimientosVM-->
+    <system:String x:Key="Recepciones">Receptions</system:String>
+    <system:String x:Key="verRecepciones">See receptions</system:String>
+    <system:String x:Key="deseaEliminarRecepcion">Do you want to delete the reception?</system:String>
+    <system:String x:Key="Transacciones">Transactions</system:String>
+    <system:String x:Key="verTransacciones">See transactions</system:String>
+    <system:String x:Key="eliminarTransaccion">Delete transaction</system:String>
+    <system:String x:Key="deseaEliminarTransaccion">Do you want to delete the transaction?</system:String>
+    <system:String x:Key="transaccionEliminada">Transaction deleted</system:String>
+    <system:String x:Key="Producto">Product</system:String>
+    <system:String x:Key="Fecha">Date</system:String>
+    <system:String x:Key="AlmacenV">Old Warehouse</system:String>
+    <system:String x:Key="AlmacenN">New Warehouse</system:String>
+
+    <!--Reportes-->
+    <system:String x:Key="TRANSACCIONES">TRANSACTIONS</system:String>
+    <system:String x:Key="SALIDAS">DEPARTURES</system:String>
+    <system:String x:Key="ENTRADAS">ENTRIES</system:String>
+    <system:String x:Key="AlmacenDestino">Warehouse Destination</system:String>
+    <system:String x:Key="AlmacenOrigen">Warehouse Origin</system:String>
+
+    <!--Reportes-->
+    <system:String x:Key="modoClaro">Light</system:String>
+    <system:String x:Key="modoOscuro">Dark</system:String>
+    
+</ResourceDictionary>

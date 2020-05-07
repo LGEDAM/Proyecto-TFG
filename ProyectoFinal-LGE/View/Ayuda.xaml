@@ -1,0 +1,83 @@
+﻿<Page x:Class="ProyectoFinal_LGE.View.Ayuda"     
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProyectoFinal_LGE.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Ayuda" Background="White">
+
+    <DockPanel>
+        <!--<StackPanel Background="Red" HorizontalAlignment="Stretch" >
+            <StackPanel.Triggers>
+                <EventTrigger RoutedEvent="StackPanel.MouseLeftButtonDown" >
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" Storyboard.TargetName="gestion"
+                   From="0.0" To="1" Duration="0:0:8" ></DoubleAnimation>
+                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="gestion" Storyboard.TargetProperty="Visibility">
+                                <DiscreteObjectKeyFrame KeyTime="0:0:8" Value="{x:Static Visibility.Visible}"/>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </StackPanel.Triggers>
+            <Label HorizontalAlignment="Center">Area outside top panel . Clicking here will hide top panel again</Label>
+        </StackPanel>-->
+
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Left" VerticalAlignment="Center" Margin="40,0" Width="400"
+                    >
+            <Border BorderThickness="2" BorderBrush="#44d9e6" CornerRadius="4">
+                <StackPanel Margin="10 10" HorizontalAlignment="Center" >
+                    <Button FontSize="15" FontFamily="Antonio Light" Click="Click1" Foreground="#44d9e6"               
+                    Style="{DynamicResource MaterialDesignFlatButton}" Height="Auto">
+                        <TextBlock TextWrapping="Wrap">GESTIÓN DE INVENTARIO</TextBlock>
+                    </Button>
+                    <TextBlock FontSize="15"  FontFamily="Antonio Light"  Visibility="Collapsed"  
+                       TextWrapping="WrapWithOverflow" Name="gestion"  FontStretch="Expanded" FontWeight="Light"
+                       Text="Gestión de productos, categorías, almacenes, proveedores y transacciones" />
+                </StackPanel>
+            </Border>
+
+            <Border BorderThickness="2" BorderBrush="#44d9e6" CornerRadius="4" Margin="0 20 0 0">
+                <StackPanel VerticalAlignment="Center" Margin="10 10" HorizontalAlignment="Center" >
+                    <Button Content="USUARIOS" FontSize="15"  FontFamily="Antonio Light" Click="Click2"
+                    Style="{DynamicResource MaterialDesignFlatButton}" Height="Auto" />
+                    <TextBlock FontSize="15"  FontFamily="Antonio Light"  Visibility="Collapsed" 
+                       TextWrapping="Wrap"   FontStretch="Expanded" FontWeight="Light" Name="usuarios"
+                       Text="Gestión de usuarios, cambiar contraseña, seleccion de permisos" />
+                </StackPanel>
+            </Border>
+
+            <Border BorderThickness="2" BorderBrush="#44d9e6" CornerRadius="4" Margin="0 20 0 0">
+                <StackPanel VerticalAlignment="Center" Margin="10 10" HorizontalAlignment="Center" >
+                    <Button Content="INTERNACIONALIZACIÓN" FontSize="15"  FontFamily="Antonio Light" Click="Click2"
+                    Style="{DynamicResource MaterialDesignFlatButton}" Height="Auto" />
+                    <TextBlock FontSize="15"  FontFamily="Antonio Light"  Visibility="Collapsed" 
+                       TextWrapping="Wrap"   FontStretch="Expanded" FontWeight="Light"
+                       Text="Interfaz de usuario dos idiomas Español, Ingles" />
+                </StackPanel>
+            </Border>
+
+            <Border BorderThickness="2" BorderBrush="#44d9e6" CornerRadius="4" Margin="0 20 0 0">
+                <StackPanel  VerticalAlignment="Center" Margin="10 10" HorizontalAlignment="Center" >
+                    <Button Content="INFORMACIÓN" FontSize="15"  FontFamily="Antonio Light" Click="Click2"
+                    Style="{DynamicResource MaterialDesignFlatButton}" Height="Auto" />
+                    <TextBlock FontSize="15"  FontFamily="Antonio Light"  Visibility="Collapsed" 
+                       TextWrapping="Wrap"   FontStretch="Expanded" FontWeight="Light"
+                       Text="Exportar e importar ficheros CSV, generar reporte pdf de las transacciones de un determinado almacen" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <TextBlock HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" TextAlignment="Center" Padding="20 0 30 0"
+            FontFamily="Antonio Light" FontSize="20"  VerticalAlignment="Center" 
+                   FontStretch="UltraExpanded" FontWeight="Light">
+            <Bold>KARMA</Bold>   te permitirá gestionar el proceso interno de inventario 
+            comunicándose de manera eficiente y segura con el servidor, y presentando una interfaz fácil e intuitiva.
+        </TextBlock>
+    </DockPanel>
+
+</Page>

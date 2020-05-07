@@ -1,0 +1,75 @@
+﻿<Page x:Class="ProyectoFinal_LGE.View.PageCategoria"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProyectoFinal_LGE.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageCategories" ShowsNavigationUI="False" >
+
+    <DockPanel Background="#fafafa">
+        <!-- Botones Parte Superior-->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="55"  Background="Transparent"
+                    HorizontalAlignment="Right">
+            <!-- Importar-->
+            <Button Name="importar" Command="{Binding ImportCategoria}"
+                    Padding="0" Width="30" Height="30" Margin="0 0 10 0"
+                    ToolTip="{DynamicResource Importar}" IsEnabled="False">
+                <materialDesign:PackIcon Kind="Import"/>
+            </Button>
+            <!-- Exportar-->
+            <Button Name="exportar" IsEnabled="False"
+                    Command="{Binding ExportCategoria}" 
+                    CommandParameter="{Binding ElementName=datagrid}"
+                    Padding="0" Width="30" Height="30" Margin="0 0 10 0"
+                    ToolTip="{DynamicResource Exportar}" >
+                <materialDesign:PackIcon Kind="Export"/>
+            </Button>
+            <!-- Añadir-->
+            <Button Command="{Binding BtnAddCategoria}" IsEnabled="False" Name="add"
+                    Padding="0" Width="30" Height="30" Margin="0 0 10 0"
+                    ToolTip="{DynamicResource ACategoria}" >
+                <materialDesign:PackIcon Kind="Plus"/>
+            </Button>
+            <!-- Editar-->
+            <Button Command="{Binding BtnEditCategoria}" IsEnabled="False" Name="edit"
+                    CommandParameter="{Binding ElementName=datagrid, Path=SelectedItem}"
+                    Padding="0" Width="30" Height="30" Margin="0 0 10 0"
+                    ToolTip="{DynamicResource MCategoria}" >
+                <materialDesign:PackIcon Kind="Edit"/>
+            </Button>
+            <!-- Eliminar-->
+            <Button Command="{Binding BtnDeleteCategoria}" IsEnabled="False" Name="delete"
+                    CommandParameter="{Binding ElementName=datagrid, Path=SelectedItem}" 
+                    Padding="0" Width="30" Height="30" Margin="0 0 20 0"
+                    ToolTip="{DynamicResource ECategoria}" >
+                <materialDesign:PackIcon Kind="Delete"/>
+            </Button>
+        </StackPanel>
+
+        <!-- Tabla-->
+        <DataGrid ItemsSource="{Binding ListaCategorias}" FontSize="12"
+                  Name="datagrid" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn  Binding="{Binding Id}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Id}" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Nombre}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Nombre}" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn  Binding="{Binding Descripcion}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Descripcion}" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Page>
